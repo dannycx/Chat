@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="50dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="添加好友"
+        android:textColor="#0bd7d7"
+        android:textSize="45sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#cf0d19">
+
+            <EditText
+                android:id="@+id/popup_friends_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="好友账号"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="#656866"
+                android:textSize="30sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#cf0d19">
+
+            <EditText
+                android:id="@+id/popup_friends_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="备注"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="#656866"
+                android:textSize="30sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="#cf0d19">
+
+                <EditText
+                    android:id="@+id/popup_friends_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="好友名字"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="#656866"
+                    android:textSize="30sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/popup_search_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="查找"
+                android:textColor="#07d7e2"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/popup_friends_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/huanxin_user" />
+
+        <TextView
+            android:id="@+id/popup_to_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="zz"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/popup_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right"
+            android:text="添加"
+            android:textColor="#07d7e2"
+            android:textSize="30sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.danny.chat">
+
+    <!-- 硬件功能请求 -->
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 项目权限配置 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 相机 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 蓝牙 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 录音 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 改变网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 访问WIFI状态 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 访问精确定位 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取手机状态 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 写入外部存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 读取外部存储 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 安装卸载文件系统 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 修改音频设置 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> <!-- 读取启动设置 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 唤醒锁屏，音视频通话所需 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".HuanxinApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:theme="@style/ChatTheme" />
+        <activity android:name=".AgreeFriendActivity" />
+        <activity
+            android:name=".videocall.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity
+            android:name=".FriendInfoActivity"
+            android:theme="@style/ChatTheme" />
+
+        <!-- 设置环信 -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1118180319177559#videocalldemo" />
+        <!-- 声明sdk所需的 Service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- 设置环信结束 -->
+        <service android:name=".service.HxService" />
+    </application>
+</manifest>

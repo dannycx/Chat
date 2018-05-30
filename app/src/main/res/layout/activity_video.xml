@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/video_call_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_call_bg">
+
+    <RelativeLayout
+        android:id="@+id/video_call_surface_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/video_call_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/video_call_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通话已建立..."
+                android:textColor="@color/video_call_answer" />
+
+            <TextView
+                android:id="@+id/video_call_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="00:59"
+                android:textColor="@color/video_call_answer"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/video_call_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="nike"
+                android:textColor="@color/video_call_answer"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/video_call_mic"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/video_call_click_mic_speaker"
+                    android:padding="5dp"
+                    android:src="@mipmap/video_call_mic" />
+
+                <ImageButton
+                    android:id="@+id/video_call_speaker"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/video_call_click_mic_speaker"
+                    android:padding="5dp"
+                    android:src="@mipmap/video_call_speaker" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/video_call_reject"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@null"
+                    android:src="@mipmap/video_call_end"
+                    app:backgroundTint="@color/video_call_red"
+                    app:fabSize="normal" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/video_call_end"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:src="@mipmap/video_call_end"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/video_call_red"
+                    app:fabSize="normal" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/video_call_answer"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:src="@mipmap/video_call"
+                    app:backgroundTint="@color/video_call_answer"
+                    app:fabSize="normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

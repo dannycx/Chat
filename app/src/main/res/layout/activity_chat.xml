@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/chat_toolbar">
+
+        <ImageButton
+            android:id="@+id/chat_quit_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@mipmap/chat_left_arrow" />
+
+        <TextView
+            android:id="@+id/chat_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#111111"
+            android:textSize="30sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/chat_operate_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <com.danny.chat.widget.expressionview.ExpressionView
+                android:id="@+id/chat_expression_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!--输入框-->
+        <RelativeLayout
+            android:id="@+id/chat_layout_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/chat_operate_more">
+
+            <ImageButton
+                android:id="@+id/chat_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/chat_more" />
+
+            <ImageButton
+                android:id="@+id/chat_btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@id/chat_more"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/chat_send_message" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/chat_btn_send">
+
+                <EditText
+                    android:id="@+id/chat_message_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true" />
+
+                <ImageView
+                    android:id="@+id/chat_send_expression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="3dp"
+                    android:src="@mipmap/chat_expression" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--展示消息内容-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_msg_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/chat_layout_input" />
+    </RelativeLayout>
+</LinearLayout>

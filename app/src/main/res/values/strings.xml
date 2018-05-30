@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Chat</string>
+
+    <!--通话方面的提示信息-->
+    <string name="call_busy">对方正忙</string>
+    <string name="call_cancel">已取消</string>
+    <string name="call_cancel_is_incoming">对方已取消</string>
+    <string name="call_reject_is_incoming">已拒绝</string>
+    <string name="call_offline">对方不在线</string>
+    <string name="call_no_response">对方可能在忙，建议稍后拨打</string>
+    <string name="call_reject">对方已拒绝</string>
+    <string name="call_connecting">正在呼叫对方</string>
+    <string name="call_connected">正在等待对方接受呼叫申请</string>
+    <string name="call_connection_fail">建立连接失败</string>
+    <string name="call_connected_is_incoming">对方申请与你进行通话</string>
+    <string name="call_accepted">通话已接通</string>
+</resources>

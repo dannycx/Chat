@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    //打电话
+    <color name="video_call_bg">#212121</color>
+    <color name="video_call_answer">#20ce09</color>
+    <color name="video_call_red">#e20615</color>
+    <color name="video_call_transparent">#00000000</color>
+    <color name="video_call_black">#1e212121</color>
+    <color name="video_call_green">#dd039e00</color>
+
+    //聊天
+    <color name="chat_toolbar">#2fb5b7</color>
+
+    //friend info divider
+    <color name="friend_info_divider">#434242</color>
+    <color name="friend_info_hint">#f70317</color>
+
+    //开机动画
+    <color name="load_red">#fa007a</color>
+    <color name="load_purple">#935fe7</color>
+    <color name="load_yellow">#f9b11f</color>
+    <color name="load_blue">#009cfa</color>
+</resources>

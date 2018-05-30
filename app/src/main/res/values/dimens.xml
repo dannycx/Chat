@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //video call
+    <dimen name="little_surface_width">90dp</dimen>
+    <dimen name="little_surface_height">108dp</dimen>
+    <dimen name="little_surface_margin_right">10dp</dimen>
+    <dimen name="little_surface_margin_top">58dp</dimen>
+</resources>

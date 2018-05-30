@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_user"
+        android:icon="@mipmap/huanxin_user"
+        android:title="用户"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_add_friend"
+        android:icon="@mipmap/huanxin_add"
+        android:title="添加好友"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/quit_login"
+        android:icon="@mipmap/huanxin_quit"
+        android:title="退出"
+        app:showAsAction="ifRoom" />
+</menu>
